@@ -1,27 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from "react";
 
-function Packages() {
-    const [packages, setPackages] = useState([]);
+const packagesDetails = [
+  { destination: "Delhi to CharDham Yatra", type: "Round Trip", price: "₹4700", duration: "1 Days" },
+  { destination: "Delhi to Dehradun", type: "One Way", price: "₹3500", duration: "1 Day" },
+  { destination: "Delhi to Haridwar", type: "One Way", price: "₹3300", duration: "1 Day" },
+  { destination: "Delhi to Ayodhya", type: "One Way", price: "₹8500", duration: "1 Day" },
+  { destination: "Delhi to Lucknow", type: "One Way", price: "₹6500", duration: "1 Days" },
+  { destination: "Delhi to Banarasi", type: "One Way", price: "₹9700", duration: "1 Day" },
+  { destination: "Delhi to Haldwani", type: "One Way", price: "₹3800", duration: "1 Days" },
+  { destination: "Delhi to Rudrapur", type: "One Way", price: "₹3300", duration: "1 Days" },
+];
 
-    useEffect(() => {
-        axios.get('http://localhost:5000/api/packages')
-            .then((response) => setPackages(response.data))
-            .catch((error) => console.error(error));
-    }, []);
-
-    return (
-        <div>
-            <h1>Traveling Packages</h1>
-            <ul>
-                {packages.map((pkg) => (
-                    <li key={pkg.id}>
-                        {pkg.name} - {pkg.price}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-}
+const Packages = () => {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {packagesDetails.map((pkg, index) => (
+          <div key={index} className="bg-white p-6 rounded-xl shadow-lg w-full max-w-sm">
+            <h3 className="text-xl font-semibold">{pkg.destination}</h3>
+            <p className="text-gray-600">{pkg.type}</p>
+            <p className="text-gray-800 font-bold mt-2">{pkg.price}</p>
+            <p className="text-gray-600">Duration: {pkg.duration}</p>
+            <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+              Book Now
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Packages;

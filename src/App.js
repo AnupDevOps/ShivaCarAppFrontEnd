@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Booking from './pages/Booking';
 import Contact from './pages/Contact';
 import Packages from './pages/Packages';
+import BookingList from './pages/BookingList';
+import Admin from './pages/Admin';
 import './App.css';
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
@@ -12,7 +14,7 @@ function App() {
         <Router>
             <div className="App">
                 <nav>
-                    <a href="/">Home</a> | <a href="/booking">Booking</a> | <a href="/packages">Packages</a>
+                    <a href="/">Home</a> | <a href="/booking">Booking</a> | <a href="/packages">Packages</a> | <a href="/bookingList">BookingList</a> | <a href="/admin">Admin</a>
                 </nav>
                 <header className="text-center py-10 bg-blue-600 text-white text-3xl font-bold">
                     Explore Unexplored North India
@@ -21,6 +23,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/booking" element={<Booking />} />
                     <Route path="/packages" element={<Packages />} />
+                    <Route path="/bookingList" element={<BookingList />} />
+                    <Route path="/admin" element={<Admin />} /> {/* Add the Admin route */}
                 </Routes>
                 {/* Footer */}
                 <footer className="bg-blue-600 text-white text-center p-6 mt-10">

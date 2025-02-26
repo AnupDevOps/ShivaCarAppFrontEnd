@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     pickup: "",
     dropoff: "",
     date: "",
     time: "",
-    phoneNumber: "",
+    phone: "",
   });
 
   const handleChange = (e) => {
@@ -17,12 +16,13 @@ const BookingPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post("http://localhost:5050/api/bookings", formData);
-      alert("Booking submitted!");
-    } catch (error) {
-      console.error(error);
-    }
+    const response = await fetch("http://localhost:5050/book", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+    alert(data.message);
   };
 
   return (
@@ -30,13 +30,13 @@ const BookingPage = () => {
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-6">Book Your Trip</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} className="w-full p-3 border rounded-md" required />
-          <input type="text" name="pickup" placeholder="Pickup Location" value={formData.pickup} onChange={handleChange} className="w-full p-3 border rounded-md" required />
-          <input type="text" name="dropoff" placeholder="Drop-off Location" value={formData.dropoff} onChange={handleChange} className="w-full p-3 border rounded-md" required />
-          <input type="date" name="date" value={formData.date} onChange={handleChange} className="w-full p-3 border rounded-md" required />
-          <input type="time" name="time" value={formData.time} onChange={handleChange} className="w-full p-3 border rounded-md" required />
-          <input type="tel" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} className="w-full p-3 border rounded-md" required />
-          <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">Book Now</button>
+        <input className="w-full p-3 border rounded-md" type="text" name="name" placeholder="Full Name" onChange={handleChange} required />
+        <input className="w-full p-3 border rounded-md" type="text" name="pickup" placeholder="Pickup Location" onChange={handleChange} required />
+        <input className="w-full p-3 border rounded-md" type="text" name="dropoff" placeholder="Drop-off Location" onChange={handleChange} required />
+        <input className="w-full p-3 border rounded-md" type="date" name="date" onChange={handleChange} required />
+        <input className="w-full p-3 border rounded-md" type="time" name="time" onChange={handleChange} required />
+        <input className="w-full p-3 border rounded-md" type="tel" name="phone" placeholder="Phone Number" onChange={handleChange} required />
+        <button className="bg-blue-500 text-white p-2 w-full rounded" type="submit">Submit Booking</button>
         </form>
       </div>
     </div>

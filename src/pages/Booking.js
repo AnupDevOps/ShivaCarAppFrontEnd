@@ -18,7 +18,7 @@ const BookingPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/bookings", formData);
+      await axios.post("http://localhost:5050/api/bookings", formData);
       alert("Booking submitted!");
     } catch (error) {
       console.error(error);

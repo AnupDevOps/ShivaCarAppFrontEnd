@@ -12,6 +12,10 @@ const packagesDetails = [
 ];
 
 const Packages = () => {
+  const handleBookNow = () => {
+    window.location.href = `/booking`;
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -21,7 +25,10 @@ const Packages = () => {
             <p className="text-gray-600">{pkg.type}</p>
             <p className="text-gray-800 font-bold mt-2">{pkg.price}</p>
             <p className="text-gray-600">Duration: {pkg.duration}</p>
-            <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+            <button
+              className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
+              onClick={() => handleBookNow()}
+            >
               Book Now
             </button>
           </div>

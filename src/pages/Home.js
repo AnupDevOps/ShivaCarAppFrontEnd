@@ -11,6 +11,7 @@ const FeatureCard = ({ title, description, image }) => {
         src={image}
         alt={title}
         className="w-full h-48 object-cover"
+        style={{ height: "400px", width: "100%" }}
       />
       <div className="p-4">
         <h2 className="text-xl font-semibold">{title}</h2>

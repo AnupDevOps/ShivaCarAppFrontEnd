@@ -13,12 +13,20 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <nav>
-                    <a href="/">Home</a> | <a href="/booking">Booking</a> | <a href="/packages">Packages</a> | <a href="/bookingList">BookingList</a> | <a href="/admin">Admin</a>
-                </nav>
-                <header className="text-center py-10 bg-blue-600 text-white text-3xl font-bold">
-                    Explore Unexplored North India
+                <header className="bg-blue-600 text-white shadow-md flex justify-center items-center py-7">
+                    <img src="https://msrprojectimages.s3.eu-north-1.amazonaws.com/UttarakhandDarshan.webp" alt="Uttarakhand Darshan Logo" className="h-20 w-auto object-contain" />
                 </header>
+                <nav className="py-4 border-t border-blue-400">
+                    <div className="container mx-auto flex justify-center space-x-6">
+                        <a href="/" className="hover:text-gray-200 transition duration-300">Home</a>
+                        <a href="/booking" className="hover:text-gray-200 transition duration-300">Booking</a>
+                        <a href="/packages" className="hover:text-gray-200 transition duration-300">Packages</a>
+                        <a href="/bookingList" className="hover:text-gray-200 transition duration-300">Booking List</a>
+                        <a href="/admin" className="hover:text-gray-200 transition duration-300">Admin</a>
+                    </div>
+                </nav>
+
+
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/booking" element={<Booking />} />
@@ -28,7 +36,7 @@ function App() {
                 </Routes>
                 {/* Footer */}
                 <footer className="bg-blue-600 text-white text-center p-6 mt-10">
-                    <p className="text-lg">&copy; 2025 Tour & Travel. All rights reserved.</p>
+                    <p className="text-lg">&copy; 2025 Uttarakhand Darshan. All rights reserved.</p>
                     <div className="flex justify-center space-x-4 mt-2">
                         <a href="#" className="hover:underline">Privacy Policy</a>
                         <a href="#" className="hover:underline">Terms of Service</a>

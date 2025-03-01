@@ -13,7 +13,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <header className="bg-blue-600 text-white shadow-md flex justify-center items-center py-7">
+                <header className="bg-blue-600 text-white shadow-md flex justify-center items-center py-3">
                     <img src="https://msrprojectimages.s3.eu-north-1.amazonaws.com/UttarakhandDarshan.webp" alt="Uttarakhand Darshan Logo" className="h-20 w-auto object-contain" />
                 </header>
                 <nav className="py-4 border-t border-blue-400">
@@ -22,7 +22,6 @@ function App() {
                         <a href="/booking" className="hover:text-gray-200 transition duration-300">Booking</a>
                         <a href="/packages" className="hover:text-gray-200 transition duration-300">Packages</a>
                         <a href="/bookingList" className="hover:text-gray-200 transition duration-300">Booking List</a>
-                        <a href="/admin" className="hover:text-gray-200 transition duration-300">Admin</a>
                     </div>
                 </nav>
 
@@ -33,6 +32,7 @@ function App() {
                     <Route path="/packages" element={<Packages />} />
                     <Route path="/bookingList" element={<BookingList />} />
                     <Route path="/admin" element={<Admin />} /> {/* Add the Admin route */}
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
                 {/* Footer */}
                 <footer className="bg-blue-600 text-white text-center p-6 mt-10">
@@ -40,7 +40,7 @@ function App() {
                     <div className="flex justify-center space-x-4 mt-2">
                         <a href="#" className="hover:underline">Privacy Policy</a>
                         <a href="#" className="hover:underline">Terms of Service</a>
-                        <a href="Contact" className="hover:underline">Contact Us</a>
+                        <a href="/Contact" className="hover:underline">Contact Us</a>
                     </div>
                     <div className="flex justify-center space-x-4 mt-4">
                         <a href="#" className="text-white text-2xl hover:text-gray-300"><FaFacebook /></a>

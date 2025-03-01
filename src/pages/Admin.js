@@ -19,7 +19,7 @@ const Admin = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://localhost:5050/bookings");
+      const response = await axios.get("http://51.20.255.216:5050/bookings");
       setBookings(response.data);
     } catch (error) {
       console.error(error);
@@ -33,7 +33,7 @@ const Admin = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5050/bookings/${id}`);
+      await axios.delete(`http://51.20.255.216:5050/bookings/${id}`);
       fetchBookings();
     } catch (error) {
       console.error(error);
@@ -48,9 +48,9 @@ const Admin = () => {
     e.preventDefault();
     try {
       if (editingBooking) {
-        await axios.put(`http://localhost:5050/bookings/${editingBooking.id}`, formData);
+        await axios.put(`http://51.20.255.216:5050/bookings/${editingBooking.id}`, formData);
       } else {
-        await axios.post("http://localhost:5050/bookings", formData);
+        await axios.post("http://51.20.255.216:5050/bookings", formData);
       }
       setEditingBooking(null);
       setFormData({

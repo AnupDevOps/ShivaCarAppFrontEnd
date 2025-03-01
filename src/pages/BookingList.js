@@ -4,7 +4,7 @@ export default function BookingList() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5050/bookings")
+    fetch("http://51.20.255.216:5050/bookings")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);

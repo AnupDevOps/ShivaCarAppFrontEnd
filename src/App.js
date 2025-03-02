@@ -14,14 +14,14 @@ function App() {
         <Router>
             <div className="App">
                 <header className="bg-blue-600 text-white shadow-md flex justify-center items-center py-3">
-                    <img src="https://msrprojectimages.s3.eu-north-1.amazonaws.com/UttarakhandDarshan.webp" alt="Uttarakhand Darshan Logo" className="h-20 w-auto object-contain" />
+                    <img src="https://msrprojectimages.s3.eu-north-1.amazonaws.com/UttarakhandDarshan.webp" alt="Uttarakhand Darshan Logo" className="h-20 w-auto object-contain" style={{ height: "100px", width: "100%" }}/>
                 </header>
                 <nav className="py-4 border-t border-blue-400">
                     <div className="container mx-auto flex justify-center space-x-6">
                         <a href="/" className="hover:text-gray-200 transition duration-300">Home</a>
                         <a href="/booking" className="hover:text-gray-200 transition duration-300">Booking</a>
                         <a href="/packages" className="hover:text-gray-200 transition duration-300">Packages</a>
-                        <a href="/bookingList" className="hover:text-gray-200 transition duration-300">Booking List</a>
+                        <a href="/admin" className="hover:text-gray-200 transition duration-300">Admin</a> {/* Add the Admin link */}
                     </div>
                 </nav>
 

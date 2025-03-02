@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import LowestPrice from "../components/images/LowestPriceGuarantee.webp";
 import CNGCabs from "../components/images/CNGPoweredCabs.webp";
 import ExploreIndia from "../components/images/UnexploredNorthIndia.webp";
@@ -19,6 +20,12 @@ const FeatureCard = ({ title, description, image }) => {
       </div>
     </div>
   );
+};
+
+FeatureCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 const Home = () => {

@@ -8,7 +8,6 @@ Login into Ec2 instance using key from local.
 /home/ubuntu
 cd ShivaCarAppFrontEnd/
 npm run build 
-rm -R /var/www/html/react-app/build
 sudo rm -R /var/www/html/react-app
 sudo mv build /var/www/html/react-app
 sudo systemctl restart nginx
@@ -18,7 +17,7 @@ update with below block inside Server block.
 ```
 server {
     listen 80;
-    server_name 51.20.255.216;
+    server_name localhost;
 
     root /var/www/html/react-app;
     index index.html;
@@ -29,3 +28,8 @@ server {
 }
 ```
 ### Update Backend code
+cd ShivaCarApp
+sudo npm install -g pm2
+pm2 start index.js
+pm2 save
+pm2 startup

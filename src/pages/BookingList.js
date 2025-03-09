@@ -21,6 +21,8 @@ export default function BookingList() {
             <th className="border p-2">Destination</th>
             <th className="border p-2">Date</th>
             <th className="border p-2">Time</th>
+            <th className="border p-2">TaxiType</th>
+            <th className="border p-2">Fare</th>
             <th className="border p-2">PhoneNumber</th>
           </tr>
         </thead>
@@ -32,6 +34,8 @@ export default function BookingList() {
               <td className="border p-2">{b.dropoff}</td>
               <td className="border p-2">{b.date}</td>
               <td className="border p-2">{b.time}</td>
+              <td className="border p-2">{b.taxiType}</td>
+              <td className="border p-2">{b.fare}</td>
               <td className="border p-2">{b.phone}</td>
             </tr>
           ))}

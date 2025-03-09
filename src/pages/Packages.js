@@ -1,7 +1,7 @@
 import React from "react";
 
 const packagesDetails = [
-  { destination: "Delhi to CharDham Yatra", type: "Round Trip", price: "₹4700", duration: "1 Days", image: "https://msrprojectimages.s3.eu-north-1.amazonaws.com/DelhitoCharDham.webp" },
+  { destination: "Delhi to CharDham Yatra", type: "One Trip", price: "₹4700", duration: "1 Days", image: "https://msrprojectimages.s3.eu-north-1.amazonaws.com/DelhitoCharDham.webp" },
   { destination: "Delhi to Dehradun", type: "One Way", price: "₹3500", duration: "1 Day", image: "https://msrprojectimages.s3.eu-north-1.amazonaws.com/DelhitoDehradun.webp" },
   { destination: "Delhi to Haridwar", type: "One Way", price: "₹3300", duration: "1 Day", image: "https://msrprojectimages.s3.eu-north-1.amazonaws.com/DelhitoHaridwar.webp" },
   { destination: "Delhi to Ayodhya", type: "One Way", price: "₹8500", duration: "1 Day", image: "https://msrprojectimages.s3.eu-north-1.amazonaws.com/DelhitoAyodhya.webp" },

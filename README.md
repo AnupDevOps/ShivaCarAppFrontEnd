@@ -33,3 +33,11 @@ sudo npm install -g pm2
 pm2 start index.js
 pm2 save
 pm2 startup
+
+#### Delete pm2 and update it 
+pm2 delete all
+pm2 stop all
+pm2 restart all
+
+cd ShivaCarApp
+npm install

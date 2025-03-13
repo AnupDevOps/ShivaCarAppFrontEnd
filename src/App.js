@@ -38,14 +38,14 @@ function App() {
                 <footer className="bg-blue-600 text-white text-center p-6 mt-10">
                     <p className="text-lg">&copy; 2025 Uttarakhand Darshan. All rights reserved.</p>
                     <div className="flex justify-center space-x-4 mt-2">
-                        <a href="#" className="hover:underline">Privacy Policy</a>
-                        <a href="#" className="hover:underline">Terms of Service</a>
+                        <a href="https://github.com/AnupDevOps" className="hover:underline">Privacy Policy</a>
+                        <a href="https://github.com/AnupDevOps" className="hover:underline">Terms of Service</a>
                         <a href="/Contact" className="hover:underline">Contact Us</a>
                     </div>
                     <div className="flex justify-center space-x-4 mt-4">
-                        <a href="#" className="text-white text-2xl hover:text-gray-300"><FaFacebook /></a>
-                        <a href="#" className="text-white text-2xl hover:text-gray-300"><FaTwitter /></a>
-                        <a href="#" className="text-white text-2xl hover:text-gray-300"><FaInstagram /></a>
+                        <a href="https://github.com/AnupDevOps" className="text-white text-2xl hover:text-gray-300"><FaFacebook /></a>
+                        <a href="https://github.com/AnupDevOps" className="text-white text-2xl hover:text-gray-300"><FaTwitter /></a>
+                        <a href="https://github.com/AnupDevOps" className="text-white text-2xl hover:text-gray-300"><FaInstagram /></a>
                     </div>
                 </footer>
 

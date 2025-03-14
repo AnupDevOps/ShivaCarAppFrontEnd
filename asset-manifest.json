@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/ShivaCarAppFrontEnd/static/css/main.1955cea7.css",
-    "main.js": "/ShivaCarAppFrontEnd/static/js/main.1c73740d.js",
+    "main.js": "/ShivaCarAppFrontEnd/static/js/main.7d0de14d.js",
     "static/js/453.8ab44547.chunk.js": "/ShivaCarAppFrontEnd/static/js/453.8ab44547.chunk.js",
     "static/media/UnexploredNorthIndia.webp": "/ShivaCarAppFrontEnd/static/media/UnexploredNorthIndia.da0601cca56229975fe7.webp",
     "static/media/LowestPriceGuarantee.webp": "/ShivaCarAppFrontEnd/static/media/LowestPriceGuarantee.aa70ed9e11cebec8b958.webp",
     "static/media/CNGPoweredCabs.webp": "/ShivaCarAppFrontEnd/static/media/CNGPoweredCabs.f587c7ab1ea19e00dcd1.webp",
     "index.html": "/ShivaCarAppFrontEnd/index.html",
     "main.1955cea7.css.map": "/ShivaCarAppFrontEnd/static/css/main.1955cea7.css.map",
-    "main.1c73740d.js.map": "/ShivaCarAppFrontEnd/static/js/main.1c73740d.js.map",
+    "main.7d0de14d.js.map": "/ShivaCarAppFrontEnd/static/js/main.7d0de14d.js.map",
     "453.8ab44547.chunk.js.map": "/ShivaCarAppFrontEnd/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1955cea7.css",
-    "static/js/main.1c73740d.js"
+    "static/js/main.7d0de14d.js"
   ]
 }
